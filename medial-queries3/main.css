@@ -1,3 +1,77 @@
 body {
-  background: peachpuff;
+  /* background: lightslategray; */
+  background: url("https://4kwallpapers.com/images/walls/thumbs_2t/11031.png");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  font-size:40px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: stretch;
+  flex-wrap: wrap;
+}
+
+header {
+  width: 100%;
+  height: 10em;
+  margin-bottom: 1em;
+  border:1px solid darkgray;
+  background-color:lightgray;
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+aside > div {
+  width: 22%;
+  margin: 2vw;
+  border:1px solid darkgray;
+  text-align:center;
+  background: lightgray;
+}
+
+main {
+  flex-grow: 4;
+  border:1px solid darkgray;
+  text-align:center;
+  background-color:lightgray;
+}
+
+
+@media (min-width: 600px) {
+  .wrapper {
+    flex-direction: row;
+  }
+  aside {
+    width: 80%;
+    flex: 4;
+    align-items: center;
+    margin-right: 1em;
+  }
+  aside > div {
+    height: 10em;
+  }
+
+  main {
+    flex: 2;
+  }
 }
